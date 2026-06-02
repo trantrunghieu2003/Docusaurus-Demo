@@ -1,10 +1,13 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import dotenv from "dotenv";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+dotenv.config();
 
 const NAME = "Help Center Demo";
+const EDIT_URL = process.env.EDIT_URL;
 
 const config: Config = {
   title: NAME,
@@ -45,7 +48,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: EDIT_URL,
         },
         blog: {
           showReadingTime: true,
@@ -55,7 +58,7 @@ const config: Config = {
           },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: EDIT_URL,
           // Useful options to enforce blogging best practices
           onInlineTags: "warn",
           onInlineAuthors: "warn",
@@ -81,15 +84,19 @@ const config: Config = {
         src: "img/logo.svg",
         width: 28,
         height: 28,
+        href: "/docs" 
       },
       items: [
-          {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
-            position: "left",
-            label: "Tutorial",
-          },
-        { to: "/blog", label: "Blog", position: "left" },
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Docs",
+        },
+        { to: "/faq", label: "FAQ", position: "left" },
+        { to: "/troubleshooting", label: "Troubleshooting", position: "left" },
+        { to: "/comparisons", label: "Comparisons", position: "left" },
+        { to: "/changelog", label: "Changelog", position: "left" },
       ],
     },
     footer: {
