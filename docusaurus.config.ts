@@ -39,7 +39,6 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   presets: [
     [
       "classic",
@@ -67,6 +66,9 @@ const config: Config = {
         theme: {
           customCss: "./src/css/custom.css",
         },
+        pages: {
+          editUrl: EDIT_URL,
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -84,7 +86,7 @@ const config: Config = {
         src: "img/logo.svg",
         width: 28,
         height: 28,
-        href: "/docs" 
+        href: "/docs",
       },
       items: [
         {
@@ -98,6 +100,7 @@ const config: Config = {
         { to: "/comparisons", label: "Comparisons", position: "left" },
         { to: "/changelog", label: "Changelog", position: "left" },
       ],
+      hideOnScroll: true,
     },
     footer: {
       style: "dark",
@@ -147,6 +150,13 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: process.env.ALGOLIA_APP_ID!,
+      // Public API key: it is safe to commit it
+      apiKey: process.env.ALGOLIA_API_KEY!,
+      indexName: process.env.ALGOLIA_INDEX_NAME!,
     },
   } satisfies Preset.ThemeConfig,
 };
