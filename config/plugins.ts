@@ -2,6 +2,7 @@ import type { Config } from "@docusaurus/types";
 import { commonConfig } from "./common";
 
 export const pluginsConfig: Config["plugins"] = [
+  "docusaurus-plugin-sass",
   [
     "@docusaurus/plugin-content-docs",
     {
