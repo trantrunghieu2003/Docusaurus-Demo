@@ -43,26 +43,8 @@ const config: Config = {
     [
       "classic",
       {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: EDIT_URL,
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ["rss", "atom"],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: EDIT_URL,
-          // Useful options to enforce blogging best practices
-          onInlineTags: "warn",
-          onInlineAuthors: "warn",
-          onUntruncatedBlogPosts: "warn",
-        },
+        docs: false,
+        blog: false,
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -91,14 +73,39 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "tutorialSidebar",
+          docsPluginId: "docs",
+          sidebarId: "docsSidebar",
           position: "left",
           label: "Docs",
         },
-        { to: "/faq", label: "FAQ", position: "left" },
-        { to: "/troubleshooting", label: "Troubleshooting", position: "left" },
-        { to: "/comparisons", label: "Comparisons", position: "left" },
-        { to: "/changelog", label: "Changelog", position: "left" },
+        {
+          type: "docSidebar",
+          docsPluginId: "faq",
+          sidebarId: "faqSidebar",
+          position: "left",
+          label: "FAQ",
+        },
+        {
+          type: "docSidebar",
+          docsPluginId: "troubleshooting",
+          sidebarId: "troubleshootingSidebar",
+          position: "left",
+          label: "Troubleshooting",
+        },
+        {
+          type: "docSidebar",
+          docsPluginId: "comparisons",
+          sidebarId: "comparisonsSidebar",
+          position: "left",
+          label: "Comparisons",
+        },
+        {
+          type: "docSidebar",
+          docsPluginId: "changelog",
+          sidebarId: "changelogSidebar",
+          position: "left",
+          label: "Changelog",
+        },
       ],
       hideOnScroll: true,
     },
@@ -159,6 +166,44 @@ const config: Config = {
       indexName: process.env.ALGOLIA_INDEX_NAME!,
     },
   } satisfies Preset.ThemeConfig,
+
+  plugins: [
+    [
+      "@docusaurus/plugin-content-docs",
+      { id: "docs", path: "src/content/docs", routeBasePath: "docs", sidebarPath: "./sidebarsDocs.ts" },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      { id: "faq", path: "src/content/faq", routeBasePath: "faq", sidebarPath: "./sidebarsFaq.ts" },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "troubleshooting",
+        path: "src/content/troubleshooting",
+        routeBasePath: "troubleshooting",
+        sidebarPath: "./sidebarsTroubleshooting.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "comparisons",
+        path: "src/content/comparisons",
+        routeBasePath: "comparisons",
+        sidebarPath: "./sidebarsComparisons.ts",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "changelog",
+        path: "src/content/changelog",
+        routeBasePath: "changelog",
+        sidebarPath: "./sidebarsChangelog.ts",
+      },
+    ],
+  ],
 };
 
 export default config;
