@@ -116,7 +116,7 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
+              label: "Introduction",
               to: "/docs",
             },
           ],
@@ -142,8 +142,8 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Changelog",
+              to: "/changelog",
             },
             {
               label: "GitHub",
