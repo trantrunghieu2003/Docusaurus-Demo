@@ -170,11 +170,17 @@ const config: Config = {
   plugins: [
     [
       "@docusaurus/plugin-content-docs",
-      { id: "docs", path: "src/content/docs", routeBasePath: "docs", sidebarPath: "./sidebarsDocs.ts" },
+      {
+        id: "docs",
+        path: "src/content/docs",
+        routeBasePath: "docs",
+        sidebarPath: "./sidebarsDocs.ts",
+        editUrl: EDIT_URL,
+      },
     ],
     [
       "@docusaurus/plugin-content-docs",
-      { id: "faq", path: "src/content/faq", routeBasePath: "faq", sidebarPath: "./sidebarsFaq.ts" },
+      { id: "faq", path: "src/content/faq", routeBasePath: "faq", sidebarPath: "./sidebarsFaq.ts", editUrl: EDIT_URL },
     ],
     [
       "@docusaurus/plugin-content-docs",
@@ -183,6 +189,7 @@ const config: Config = {
         path: "src/content/troubleshooting",
         routeBasePath: "troubleshooting",
         sidebarPath: "./sidebarsTroubleshooting.ts",
+        editUrl: EDIT_URL,
       },
     ],
     [
@@ -192,6 +199,7 @@ const config: Config = {
         path: "src/content/comparisons",
         routeBasePath: "comparisons",
         sidebarPath: "./sidebarsComparisons.ts",
+        editUrl: EDIT_URL,
       },
     ],
     [
@@ -201,6 +209,7 @@ const config: Config = {
         path: "src/content/changelog",
         routeBasePath: "changelog",
         sidebarPath: "./sidebarsChangelog.ts",
+        editUrl: EDIT_URL,
       },
     ],
   ],
