@@ -1,0 +1,30 @@
+{
+  "title": {
+    "message": "Help Center",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "Help Center Logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Docs": {
+    "message": "Tài liệu",
+    "description": "Navbar item with label Docs"
+  },
+  "item.label.FAQs": {
+    "message": "Câu hỏi thường gặp",
+    "description": "Navbar item with label FAQs"
+  },
+  "item.label.Troubleshooting": {
+    "message": "Khắc phục sự cố",
+    "description": "Navbar item with label Troubleshooting"
+  },
+  "item.label.Comparisons": {
+    "message": "So sánh",
+    "description": "Navbar item with label Comparisons"
+  },
+  "item.label.Changelog": {
+    "message": "Nhật ký thay đổi",
+    "description": "Navbar item with label Changelog"
+  }
+}
