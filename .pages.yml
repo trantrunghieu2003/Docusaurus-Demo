@@ -43,7 +43,7 @@ content:
     label: Docs
     type: collection
     path: src/content/docs
-    filename: "{fields.slug}.mdx"
+    filename: "{primary}.mdx"
     subfolders: true
     fields:
       - component: doc
