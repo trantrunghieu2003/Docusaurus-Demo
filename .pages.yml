@@ -24,6 +24,7 @@ components:
       - name: body
         label: Body
         type: rich-text
+
   category:
     type: object
     label: Category
@@ -42,9 +43,8 @@ content:
     label: Docs
     type: collection
     path: src/content/docs
-    filename: "{slug}.mdx"
+    filename: "{fields.slug}.mdx"
     subfolders: true
-
     fields:
       - component: doc
 
@@ -54,6 +54,5 @@ content:
     path: src/content
     filename: "_category_.yml"
     subfolders: true
-
     fields:
       - component: category
