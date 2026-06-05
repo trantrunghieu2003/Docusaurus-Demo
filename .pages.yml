@@ -46,8 +46,23 @@ content:
     filename: "{primary}.mdx"
     subfolders: true
     fields:
-      - name: doc
-        component: docComponent
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+
+      - name: sidebar_label
+        label: Sidebar Label
+        type: string
+        required: true
+
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
+
+      - name: body
+        label: Body
+        type: rich-text
 
   - name: categories
     label: Categories
@@ -56,5 +71,11 @@ content:
     filename: "{primary}.json"
     subfolders: true
     fields:
-      - name: category
-        component: categoryComponent
+      - name: label
+        label: Label
+        type: string
+        required: true
+
+      - name: position
+        label: Position
+        type: number
