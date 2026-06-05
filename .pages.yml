@@ -44,7 +44,7 @@ content:
     type: collection
     path: src/content/docs
     subfolders: true
-    filename: "{primary}.mdx"
+    filename: "{{primary}}.mdx"
     fields:
       - name: doc
         component: docComponent
@@ -53,7 +53,7 @@ content:
     label: Categories
     type: collection
     path: src/content
-    filename: "{primary}.json"
+    filename: "{{primary}}.json"
     subfolders: true
     fields:
       - name: category
