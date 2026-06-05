@@ -1,0 +1,32 @@
+media:
+  input: static/img/uploads
+  output: /img/uploads
+
+content:
+  - name: docs
+    label: Docs
+    type: collection
+    path: src/content/docs
+
+    filename: "{primary}.mdx"
+
+    subfolders: true
+
+    fields:
+      - name: primary
+        label: Slug
+        type: string
+        required: true
+
+      - name: sidebar_label
+        label: Sidebar Label
+        type: string
+        required: true
+
+      - name: sidebar_position
+        label: Sidebar Position
+        type: number
+
+      - name: body
+        label: Body
+        type: rich-text
