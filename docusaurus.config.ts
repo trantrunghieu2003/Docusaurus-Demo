@@ -10,7 +10,7 @@ import { PluginOptions as SearchPluginOptions } from "@easyops-cn/docusaurus-sea
 const config: Config = {
   title: commonConfig.title,
   url: commonConfig.appUrl,
-  baseUrl: "/",
+  baseUrl: commonConfig.baseUrl,
 
   favicon: commonConfig.logo,
   trailingSlash: false,

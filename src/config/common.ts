@@ -4,6 +4,7 @@ dotenv.config();
 export const commonConfig = {
   title: "Help Center",
   editUrl: process.env.EDIT_URL,
+  baseUrl: process.env.BASE_URL || "/",
   appUrl: process.env.APP_URL!,
 
   logo: 'img/logo.png',
