@@ -1,6 +1,6 @@
 media:
-  input: static/img/uploads
-  output: /img/uploads
+  input: static/img
+  output: /img
 
 components:
   doc:
