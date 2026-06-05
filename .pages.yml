@@ -2,42 +2,6 @@ media:
   input: static/img
   output: /img
 
-components:
-  docComponent:
-    type: object
-    label: Document
-    fields:
-      - name: slug
-        label: Slug
-        type: string
-        required: true
-
-      - name: sidebar_label
-        label: Sidebar Label
-        type: string
-        required: true
-
-      - name: sidebar_position
-        label: Sidebar Position
-        type: number
-
-      - name: body
-        label: Body
-        type: rich-text
-
-  categoryComponent:
-    type: object
-    label: Category
-    fields:
-      - name: label
-        label: Label
-        type: string
-        required: true
-
-      - name: position
-        label: Position
-        type: number
-
 content:
   - name: docs
     label: Docs
