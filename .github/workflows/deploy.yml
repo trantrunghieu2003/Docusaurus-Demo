@@ -17,6 +17,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      APP_URL: ${{ secrets.APP_URL }}
+      EDIT_URL: ${{ secrets.EDIT_URL }}
 
     steps:
       - name: Checkout
