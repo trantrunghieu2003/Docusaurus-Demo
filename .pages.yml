@@ -46,7 +46,7 @@ content:
     subfolders: true
 
     fields:
-      component: doc
+      - component: doc
 
   - name: categories
     label: Categories
@@ -56,4 +56,4 @@ content:
     subfolders: true
 
     fields:
-      component: category
+      - component: category
