@@ -2,18 +2,12 @@ media:
   input: static/img/uploads
   output: /img/uploads
 
-content:
-  - name: docs
-    label: Docs
-    type: collection
-    path: src/content/docs
-
-    filename: "{primary}.mdx"
-
-    subfolders: true
-
+components:
+  doc:
+    type: object
+    label: Document
     fields:
-      - name: primary
+      - name: slug
         label: Slug
         type: string
         required: true
@@ -30,3 +24,36 @@ content:
       - name: body
         label: Body
         type: rich-text
+  category:
+    type: object
+    label: Category
+    fields:
+      - name: label
+        label: Label
+        type: string
+        required: true
+
+      - name: position
+        label: Position
+        type: number
+
+content:
+  - name: docs
+    label: Docs
+    type: collection
+    path: src/content/docs
+    filename: "{slug}.mdx"
+    subfolders: true
+
+    fields:
+      component: doc
+
+  - name: categories
+    label: Categories
+    type: collection
+    path: src/content
+    filename: "_category_.yml"
+    subfolders: true
+
+    fields:
+      component: category
