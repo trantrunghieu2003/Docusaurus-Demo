@@ -45,7 +45,9 @@ content:
     path: src/content/docs
     subfolders: true
     filename: "{primary}.mdx"
-    component: docComponent
+    fields:
+      - name: doc
+        component: docComponent
 
   - name: categories
     label: Categories
@@ -53,4 +55,6 @@ content:
     path: src/content
     filename: "{primary}.json"
     subfolders: true
-    component: categoryComponent
+    fields:
+      - name: category
+        component: categoryComponent
