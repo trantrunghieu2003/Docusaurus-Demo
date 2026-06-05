@@ -32,7 +32,7 @@ content:
     label: Categories
     type: collection
     path: src/content
-    filename: "{primary}.yml"
+    filename: "_category_.yml"
     subfolders: true
     fields:
       - name: label
