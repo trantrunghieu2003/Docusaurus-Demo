@@ -3,7 +3,7 @@ media:
   output: /img
 
 components:
-  doc:
+  docComponent:
     type: object
     label: Document
     fields:
@@ -25,7 +25,7 @@ components:
         label: Body
         type: rich-text
 
-  category:
+  categoryComponent:
     type: object
     label: Category
     fields:
@@ -43,16 +43,14 @@ content:
     label: Docs
     type: collection
     path: src/content/docs
-    filename: "{primary}.mdx"
     subfolders: true
-    fields:
-      - component: doc
+    filename: "{primary}.mdx"
+    component: docComponent
 
   - name: categories
     label: Categories
     type: collection
     path: src/content
-    filename: "_category_.yml"
+    filename: "{primary}.json"
     subfolders: true
-    fields:
-      - component: category
+    component: categoryComponent
