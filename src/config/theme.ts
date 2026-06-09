@@ -13,48 +13,35 @@ const navbar: Preset.ThemeConfig["navbar"] = {
   },
   items: [
     {
-      type: "docSidebar",
-      sidebarId: "docsSidebar",
       position: "left",
       label: "Docs",
+      to: "/docs",
     },
     {
-      type: "docSidebar",
-      docsPluginId: "faq",
-      sidebarId: "faqSidebar",
       position: "left",
       label: "FAQs",
+      to: "/faq",
     },
     {
-      type: "docSidebar",
-      docsPluginId: "troubleshooting",
-      sidebarId: "troubleshootingSidebar",
       position: "left",
       label: "Troubleshooting",
+      to: "/troubleshooting",
     },
     {
-      type: "docSidebar",
-      docsPluginId: "comparisons",
-      sidebarId: "comparisonsSidebar",
       position: "left",
       label: "Comparisons",
+      to: "/comparisons",
     },
     {
-      type: "docSidebar",
-      docsPluginId: "changelog",
-      sidebarId: "changelogSidebar",
       position: "left",
       label: "Changelog",
+      to: "/changelog",
     },
-    {
-      type: "docsVersionDropdown",
-      position: "right",
-      docsPluginId: "default",
-    },
-    {
-      type: "localeDropdown",
-      position: "right",
-    },
+    // {
+    //   type: "docsVersionDropdown",
+    //   position: "right",
+    //   docsPluginId: "default",
+    // },
   ],
   hideOnScroll: true,
 };

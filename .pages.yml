@@ -3,11 +3,11 @@ media:
   output: /img
 
 content:
-  - name: docs
-    label: Docs
+  - name: content
+    label: Content
     type: collection
-    path: src/content/docs
-    filename: "{primary}.mdx"
+    path: editor
+    filename: "{slug}.mdx"
     subfolders: true
     fields:
       - name: slug
@@ -31,7 +31,7 @@ content:
   - name: categories
     label: Categories
     type: collection
-    path: src/content
+    path: editor
     filename: "_category_.yml"
     subfolders: true
     fields:
